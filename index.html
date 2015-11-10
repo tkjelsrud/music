@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Synth</title>
+   
+    <script type="text/javascript">
+        function createAudioContext() {
+            var contextClass = (window.AudioContext ||
+                window.webkitAudioContext ||
+                window.mozAudioContext ||
+                window.oAudioContext);
+            if (contextClass) {
+                return new contextClass();
+            } else {
+                alert("Sorry. WebAudio API not supported. Try using the Google Chrome or Safari browser.");
+                return null;
+            }
+        }
+
+        // Start off by initializing a new audioContext.
+        var audioContext =  createAudioContext();
+        
+        function Synth() {
+            this.osc = [];
+            this.oscTrgIdx = 0;
+            this.addOsc = function() {
+                this.osc.push(audioContext.createOscillator());
+            };
+            this.play = function() {
+                this.osc[oscTrgIdx+]
+            };
+        };
+        
+        
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
